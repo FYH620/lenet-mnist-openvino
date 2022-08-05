@@ -1,0 +1,10 @@
+Train With FP32
+img=img/255
+img=(img-mean)/std
+mean=[0.1307]
+std=[0.3081]
+img_size=1channel*28h*28w
+NCHW Format
+
+需要管理员权限cmd，执行安装目录下的openvino/deployment_tools/model_optimizer目录内的mo_onnx.py
+python mo_onnx.py --input_model="C:\Users\86152\Desktop\MNIST\lenet.onnx" --input_shape=[1,1,28,28] --mean_values=[0.1307] --scale_values=[0.3081]
